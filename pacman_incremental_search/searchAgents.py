@@ -206,7 +206,8 @@ class SearchAgent(Agent):
             self.rhs,
             self.heuristic,
             self.pathSequence,
-            self.actionSequence) 
+            self.actionSequence)
+        self.firstLoop = False
         self.rhs[problem.goal] = 0  # rhs of goal state is 0
         problem.rhs[problem.goal] = 0
         self.heuristic = problem.updateHeuristics(problem.startState) # To store the heuristic with respect to the current robotLoc(AKA nodeStart). ALSO need to update this whenever robot moves!
